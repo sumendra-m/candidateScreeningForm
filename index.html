@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- CSS Link -->
+  <link rel="stylesheet" href="assets/style.css" />
+
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- <div class="navbar">
+    <img src="assets/logo_civil.png" alt="" id="logo_civil" />
+    <div class="new">
+      <h1>CIVIL BANK LIMITED</h1>
+      <p style="font-size: 14px">Sundhara, Kathmadnu</p>
+    </div>
+  </div> -->
+  <div class="container">
+    <div class="title">Candidate Registration</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <!-- name ,dob , age , Banking Experience -->
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" id="name" />
+          </div>
+          <div class="input-box">
+            <span class="details">Date of Birth</span>
+            <input type="date" id="txtbirthdate" placeholder="mm/dd/yyyy" onkeyup="getAgeVal(0)"
+              onblur="getAgeVal(0);" />
+          </div>
+          <div class="input-box">
+            <span class="details">Age</span>
+            <input type="text" name="txtage" id="txtage" autocomplete="off" disabled />
+          </div>
+          <div class="input-box">
+            <span class="details">Total Banking Experience</span>
+            <select name="bankingexperience" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+          <!-- Last Education Completed -->
+
+          <span class="details" style="width: 100%; font-weight: 800; text-decoration: underline">Last Education
+            Completed</span>
+
+          <div class="input-box">
+            <span class="details">Level</span>
+            <select name="educationlevel" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="Bachelors">Bachelors</option>
+              <option value="Masters">Masters</option>
+              <option value="PHD">PHD</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Years Of Completion</span>
+            <select name="yearcompleteeducation" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box"></div>
+
+          <div class="input-box"></div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+          <!-- Current Oganization -->
+
+          <span class="details" style="width: 100%; font-weight: 800; text-decoration: underline">Current
+            Organization</span>
+
+          <div class="input-box">
+            <span class="details">Date of Joining</span>
+            <input type="month" placeholder="" id="currentjoindate" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Joined Level</span>
+            <input type="text" placeholder="" id="curretjoinlevel" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Current Level</span>
+            <input type="text" placeholder="" id="currentlevel" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Current Role</span>
+            <input type="text" placeholder="" id="currentrole" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">No. of Years In Current Level</span>
+            <select name="yearcurrentlevel" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+
+
+
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">No. of Years In Current Role</span>
+            <select name="yearcurrentrole" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box"></div>
+          <div class="input-box"></div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+
+          <!-- Previous Oganization -->
+
+          <span class="details" style="width: 100%; font-weight: 800; text-decoration: underline">Previous
+            Organization</span>
+
+          <div class="input-box">
+            <span class="details">Date of Joining</span>
+            <input type="month" placeholder="" previousjoindate />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Joined Level</span>
+            <input type="text" placeholder="" id="previousjoinlevel" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Current Level</span>
+            <input type="text" placeholder="" id="currentlevel" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">Role</span>
+            <input type="text" placeholder="" id="" />
+          </div>
+
+          <div class="input-box">
+            <span class="details">No. of Years In Current Level</span>
+            <select name="role" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">No. of Years In Current Role</span>
+            <select name="role" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Date of Release</span>
+            <input type="month" placeholder="" />
+          </div>
+          <div class="input-box">
+            <span class="details">Reason For Leaving</span>
+            <input type="text" placeholder="" />
+          </div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+          <!-- Total Experience in years -->
+
+          <span class="details" style="width: 100%; font-weight: 800; text-decoration: underline">Total Experience (In
+            Years)</span>
+
+          <div class="input-box">
+            <span class="details">Operational Role</span>
+            <select name="operationalrole" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Business Role</span>
+            <select name="businessrole" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+            </select>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Other Role If any</span>
+            <select name="otherrole" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="0.5">0.5 year</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years</option>
+              <option value="6">6 years</option>
+              <option value="6+">6 + years</option>
+
+            </select>
+          </div>
+
+          <div class="input-box"></div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+
+          <!-- Experience as RM and BM -->
+          <div class="input-box" style="width: 100%; padding-left: 50px;">
+            <table>
+              <thead>
+                <tr>
+                  <th id="top"> </th>
+                  <th id="top">Organization</th>
+                  <th id="top">Branch</th>
+                  <th id="top">Tenure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th id="top">Experience as BM</th>
+                  <th><input type="text" id="bmorganization"></th>
+                  <th><input type="text" id="bmbranch"></th>
+                  <th>
+                    <select name="bmtenure" id="dropdown">
+                      <option value="">-- Select One --</option>
+                      <option value="0.5">0.5 year</option>
+                      <option value="1">1 year</option>
+                      <option value="2">2 years</option>
+                      <option value="3">3 years</option>
+                      <option value="4">4 years</option>
+                      <option value="5">5 years</option>
+                      <option value="6">6 years</option>
+                      <option value="6+">6 + years</option>
+
+                    </select>
+                  </th>
+                </tr>
+
+                <tr>
+                  <th id="top">Experience as RM</th>
+                  <th><input type="text"></th>
+                  <th><input type="text"></th>
+                  <th>
+                    <select name="role" id="dropdown">
+                      <option value="">-- Select One --</option>
+                      <option value="0.5">0.5 year</option>
+                      <option value="1">1 year</option>
+                      <option value="2">2 years</option>
+                      <option value="3">3 years</option>
+                      <option value="4">4 years</option>
+                      <option value="5">5 years</option>
+                      <option value="6">6 years</option>
+                      <option value="6+">6 + years</option>
+
+                    </select>
+                  </th>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+
+          <!-- Experience in leading team -->
+
+          <span class="details" style="width: 100%; font-weight: 800; text-decoration: underline">Experience in Leading
+            Team </span>
+
+          <div class="input-box" style="width: 100%; padding-left: 50px;">
+            <table>
+              <thead>
+                <tr>
+                  <br>
+                  <th id="top"> Organization </th>
+                  <th id="top">Role</th>
+                  <th id="top">Branch/Department</th>
+                  <th id="top">Tenure</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th><input type="text"></th>
+                  <th><input type="text"></th>
+                  <th><input type="text"></th>
+                  <th>
+                    <select name="role" id="dropdown">
+                      <option value="">-- Select One --</option>
+                      <option value="0.5">0.5 year</option>
+                      <option value="1">1 year</option>
+                      <option value="2">2 years</option>
+                      <option value="3">3 years</option>
+                      <option value="4">4 years</option>
+                      <option value="5">5 years</option>
+                      <option value="6">6 years</option>
+                      <option value="6+">6 + years</option>
+
+                    </select>
+                  </th>
+
+                </tr>
+
+                <tr>
+                  <th><input type="text"></th>
+                  <th><input type="text"></th>
+                  <th><input type="text"></th>
+                  <th>
+                    <select name="role" id="dropdown">
+                      <option value="">-- Select One --</option>
+                      <option value="0.5">0.5 year</option>
+                      <option value="1">1 year</option>
+                      <option value="2">2 years</option>
+                      <option value="3">3 years</option>
+                      <option value="4">4 years</option>
+                      <option value="5">5 years</option>
+                      <option value="6">6 years</option>
+                      <option value="6+">6 + years</option>
+
+                    </select>
+                  </th>
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+
+
+          <!-- 13. Significant Role  -->
+
+          <div class="input-box" style="width: 100%;">
+
+            <span class="details">Significant Achievements - that you would want to highlight</span>
+            <textarea name="significantrole" id="textarea" cols="170" rows="10"></textarea>
+          </div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+          <!-- 9. Preferred Role -->
+          <div class="input-box">
+            <span class="details">Preferred Role</span>
+            <input type="text" placeholder="">
+            <input type="text">
+            <input type="text">
+          </div>
+
+          <hr>
+
+          <!-- 12. Expected Level -->
+          <div class="input-box">
+            <span class="details">Expected level</span>
+            <input type="text" placeholder="" id="expectedpost" />
+          </div>
+
+          <!--Current Salary  -->
+          <div class="input-box">
+            <span class="details">Current level</span>
+            <input type="text" placeholder="" id="currentlevel" />
+          </div>
+
+          <!-- 11. Expected Salary  -->
+          <div class="input-box">
+            <span class="details">Current Salary</span>
+            <input type="text" placeholder="NPR" id="currentsalary" />
+          </div>
+
+          <div class="spacing" style="margin-bottom: 150px"></div>
+          <hr style="width: 100%; margin-bottom: 20px" />
+
+          <!-- Question 1 -->
+          <div class="input-box">
+            <span class="details">Do you know anyone in Civil Bank?</span>
+            <input type="text" id="knowanyone" placeholder="If Yes, Enter the name">
+          </div>
+
+          <!-- Question 2 -->
+          <div class="input-box" style="width: 40%;">
+            <span class="details">Do you or your family memeber have any kinds of loan in Civil Bank?</span>
+            <select name="bankloan" id="dropdown">
+              <option value="">-- Select One --</option>
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div class="input-box"></div>
+
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Submit" />
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/age.js"></script>
+</body>
+
+</html>
